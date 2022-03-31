@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordle</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>RECORDLE</h1>
+    <!-- <h2>SOUND UP 🔊</h2> -->
+    <button id="startBtn">START GAME</button>
+    <div id="gameContainer" class="container">
+      <div class="row row-1">
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+      </div>
+      <div class="row row-2">
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+      </div>
+      <div class="row row-3">
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+      </div>
+      <div class="row row-4">
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+      </div>
+      <div class="row row-5">
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+      </div>
+      <div class="row row-6">
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+        <div class="letter_input"></div>
+      </div>
+    </div>
+
+    <div class="score-card" id="scoreCard">
+      <h2 id="you-lose-banner" style="display: none;"><strong>SORRY YOU LOSE!</strong></h2>
+      <h2 id="you-win-banner" style="display: none;"><strong>YOU WIN!</strong></h2>
+      <h2>GAME STATS</h2>
+      <div style="padding-left: 30px; width: 100%; display: flex; flex-direction: column; align-items: start;">
+        <h3>Played: <span id="played"></span></h3>
+        <h3>Win%: <span id="win"></span></h3>
+      </div>
+
+    </div>
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
