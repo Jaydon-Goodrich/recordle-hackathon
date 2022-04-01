@@ -23,7 +23,6 @@ let socket;
 let api_key_id;
 
 let playedToday = localStorage.getItem('playedToday')
-console.log(wordOfTheDay)
 if(playedToday == true){
   endGame()
 }
@@ -75,10 +74,8 @@ function submitGuess(word){
 function endGame(outcome){
   if(outcome == 'win'){
     youWinBanner.style.display = "block"
-    console.log('YOU WIN!')
   }else{
     youLoseBanner.style.display = "block"
-    console.log('YOU Lose!')
   }
   destroyKey()
   setScores(outcome)
