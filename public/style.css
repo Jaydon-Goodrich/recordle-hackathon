@@ -44,6 +44,10 @@ button{
   margin: 2px;
   text-transform: uppercase;
 }
+#instructions{
+  border: black 1px solid; 
+  width: 40%;
+}
 .locked{
   pointer-events: none;
 }
@@ -91,4 +95,21 @@ button{
 }
 .letterWrong {
   background-color: #8B837E
+}
+
+@media only screen and (max-width: 600px) {
+  #containingDiv{
+    flex-direction: column;
+    width: 100%;
+  }
+  #instructions{
+    width: 100%;
+    text-align: center;
+  }
+  #gameContainer{
+    width: 100%;
+  }
+  .score-card{
+    width: 100%;
+  }
 }
