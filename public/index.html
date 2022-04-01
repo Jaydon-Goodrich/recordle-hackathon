@@ -11,6 +11,27 @@
     <h1>RECORDLE</h1>
     <!-- <h2>SOUND UP 🔊</h2> -->
     <button id="startBtn">START GAME</button>
+    <div style="display: flex; justify-content: space-around; width: 100%;">
+    <div id="instructions" style="border: black 1px solid; width: 40%;">
+      <h3>How It Works</h3>
+      <p>Recordle is a hands free game played with your voice.</p>
+      <p>To play simply say the <strong>"WORD"</strong> followed by a 5 letter word.</p>
+      <div style="display: flex;">
+        <div style="width: 50px; height: 50px; background-color: #e5b9ad"></div>
+        <p>This means the letter is correct but in the wrong position.</p>
+      </div>
+      <div style="display: flex;">
+        <div style="width: 50px; height: 50px; background-color: #ade5d5"></div>
+        <p>This means the letter is correct and in the right position.</p>
+      </div>
+      <p>Once the correct word is guessed or all guesses are used the game is over.</p>
+      <div id="letter-div" style="display: none; text-align: center;">
+        <h3>Letters Used</h3>
+        <div id="alphabet-div" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center;">
+          <span class="letter">A</span><span class="letter">B</span><span class="letter">C</span><span class="letter">D</span><span class="letter">E</span><span class="letter">F</span><span class="letter">G</span><span class="letter">H</span><span class="letter">I</span><span class="letter">J</span><span class="letter">K</span><span class="letter">L</span><span class="letter">M</span><span class="letter">N</span><span class="letter">O</span><span class="letter">P</span><span class="letter">Q</span><span class="letter">R</span><span class="letter">S</span><span class="letter">T</span><span class="letter">U</span><span class="letter">V</span><span class="letter">W</span><span class="letter">X</span><span class="letter">Y</span><span class="letter">Z</span>
+        </div>
+      </div>
+    </div>
     <div id="gameContainer" class="container">
       <div class="row row-1">
         <div class="letter_input"></div>
@@ -54,6 +75,8 @@
         <div class="letter_input"></div>
         <div class="letter_input"></div>
       </div>
+    </div>
+
     </div>
 
     <div class="score-card" id="scoreCard">

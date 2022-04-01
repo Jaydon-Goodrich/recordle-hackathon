@@ -80,3 +80,15 @@ button{
 #gameContainer {
   display: none;
 }
+.letter {
+  max-width: 50px;
+  padding: 25px;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+.letterCorrect {
+  background-color: #ade5d5
+}
+.letterWrong {
+  background-color: #8B837E
+}

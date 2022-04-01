@@ -6,6 +6,8 @@ const youWinBanner = document.getElementById('you-win-banner')
 const scoreCard = document.getElementById('scoreCard')
 const played = document.getElementById('played')
 const win = document.getElementById('win')
+const letterDiv = document.getElementById('letter-div')
+const instructions = document.getElementById('instructions')
 let guessedWords = [];
 
 let date = new Date();
@@ -21,22 +23,41 @@ let socket;
 let api_key_id;
 
 let playedToday = localStorage.getItem('playedToday')
-
+console.log(wordOfTheDay)
 if(playedToday == true){
   endGame()
 }
 
 function submitGuess(word){
+  var spans = document.getElementById('alphabet-div').getElementsByTagName('span')
+
   guessedWords.push(word)
   let rowEl = document.querySelector(`.row-${row}`)
   const rowInputs = rowEl.querySelectorAll('div')
   let lettersRight = 0;
   rowInputs.forEach((input, i) => {
+    for(var j = 0; j < spans.length; j++){
+      if(spans[j].textContent == word[i]){
+        spans[j].classList.add('letterWrong')
+      }
+    }
     input.textContent = word[i]
     if(input.textContent == wordOfTheDay[i]){
       input.classList.add('right')
+      for(var j = 0; j < spans.length; j++){
+        if(spans[j].textContent == input.textContent){
+          spans[j].classList.remove('letterWrong')
+          spans[j].classList.add('letterCorrect')
+        }
+      }
       lettersRight++
     }else if(wordOfTheDay.includes(input.textContent)){
+      for(var k = 0; k < spans.length; k++){
+        if(spans[k].textContent == input.textContent){
+          spans[k].classList.remove('letterWrong')
+          spans[k].classList.add('letterCorrect')
+        }
+      }
       input.classList.add('right-letter')
     }
   })
@@ -65,6 +86,7 @@ function endGame(outcome){
   startBtn.style.display = "block"
   gameContainer.style.display = "none"
   startBtn.style.display = "none"
+  instructions.style.display = "none"
   mediaRecorder.stop()
   socket.close();
 }
@@ -101,7 +123,7 @@ function isOpen(ws) { return ws.readyState === ws.OPEN }
 
 
 async function startGame() {
-
+  
   const result = await fetch('/key', { method: 'POST' }).then((r) => r.json())
   let key = result.key
   api_key_id = result.api_key_id
@@ -110,6 +132,7 @@ async function startGame() {
   window.speechSynthesis.speak(msg);
   startBtn.style.display = "none"
   gameContainer.style.display = "flex"
+  letterDiv.style.display = "block"
   navigator.mediaDevices.getUserMedia({audio: true}).then((stream) => {
     mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' })
 
