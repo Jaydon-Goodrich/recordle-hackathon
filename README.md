@@ -78,8 +78,9 @@ This game is played with your voice. Start the game by pressing the button and t
 
 <!-- LICENSE -->
 ## License
+Copyright 2022 Jaydon Goodrich
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the Apache 2.0 License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
