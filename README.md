@@ -50,7 +50,7 @@ This app is built in HTML, CSS, and JavaScript. The app is using an express serv
 
 ### Installation
 
-1. Get a free API Key at [https://deeogram.com](https://console.deepgram.com/signup)
+1. Get a free API Key at [https://deepgram.com](https://console.deepgram.com/signup)
 2. Clone the repo
    ```sh
    git clone https://github.com/Jaydon-Goodrich/recordle-hackathon.git
